@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ["Cormorant Garamond", "Georgia", "serif"],
-        sans: ["DM Sans", "system-ui", "sans-serif"],
+        heading: ["Montserrat", "sans-serif"],
+        body: ["Raleway", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -23,12 +23,14 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
+        dark: {
+          DEFAULT: "hsl(var(--dark))",
+          lighter: "hsl(var(--dark-lighter))",
         },
-        "warm-gray": "hsl(var(--warm-gray))",
-        "warm-dark": "hsl(var(--warm-dark))",
+        amber: {
+          DEFAULT: "hsl(var(--amber))",
+          hover: "hsl(var(--amber-hover))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -83,19 +85,24 @@ export default {
           to: { height: "0" },
         },
         "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(30px)" },
+          "0%": { opacity: "0", transform: "translateY(40px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         "fade-in": {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "count-up": {
+          "0%": { opacity: "0", transform: "scale(0.8)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-up": "fade-up 0.8s ease-out forwards",
-        "fade-in": "fade-in 1s ease-out forwards",
+        "fade-up": "fade-up 0.7s ease-out forwards",
+        "fade-in": "fade-in 0.8s ease-out forwards",
+        "count-up": "count-up 0.5s ease-out forwards",
       },
     },
   },

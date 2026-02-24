@@ -1,52 +1,44 @@
-import { Shield, Clock, Star, Eye } from "lucide-react";
-
-const values = [
-  { icon: Star, title: "5.0-Star Rated", desc: "Consistently top-rated by homeowners who trust our work." },
-  { icon: Shield, title: "Full-Service", desc: "One team from concept to completion — no subcontractor shuffle." },
-  { icon: Eye, title: "Detail-Obsessed", desc: "Every tile, every seam, every finish — precision is our standard." },
-  { icon: Clock, title: "On-Time Delivery", desc: "We respect your schedule and deliver when we say we will." },
-];
+import heroLiving from "@/assets/hero-living.jpg";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="section-padding bg-secondary">
+    <section id="about" className="section-padding bg-background">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-          {/* Left — story */}
-          <div>
-            <div className="gold-line mb-6" />
-            <p className="text-xs tracking-[0.3em] uppercase text-primary mb-4 font-sans font-medium">
-              About Us
-            </p>
-            <h2 className="text-3xl md:text-5xl font-serif font-light text-foreground mb-8">
-              Built on Craft,<br />Driven by Care
-            </h2>
-            <div className="space-y-5 text-secondary-foreground/80 text-base leading-relaxed font-sans">
-              <p>
-                Matthew Ray Homes Inc. is a full-service home remodeling company committed to
-                transforming living spaces with precision, quality materials, and an unwavering
-                attention to detail.
-              </p>
-              <p>
-                From kitchens and bathrooms to whole-home renovations and additions, every project
-                receives personalized care. We don't just renovate homes — we craft environments
-                where families thrive.
-              </p>
-            </div>
+        <div className="text-center mb-6">
+          <p className="font-heading text-sm font-semibold tracking-widest uppercase text-amber mb-3">
+            About Matthew Ray Homes
+          </p>
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+            Premium Home Remodeling &<br className="hidden md:block" /> Custom Construction
+          </h2>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mt-14">
+          <div className="rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src={heroLiving}
+              alt="Luxury home interior renovation"
+              className="w-full h-[400px] object-cover"
+              loading="lazy"
+            />
           </div>
 
-          {/* Right — values grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {values.map((v) => (
-              <div
-                key={v.title}
-                className="bg-background border border-border p-8 group hover:border-primary/40 transition-colors duration-300"
-              >
-                <v.icon className="w-5 h-5 text-primary mb-5" strokeWidth={1.5} />
-                <h3 className="font-serif text-lg text-foreground mb-2">{v.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed font-sans">{v.desc}</p>
-              </div>
-            ))}
+          <div className="space-y-5 font-body text-muted-foreground leading-relaxed">
+            <p>
+              At <strong className="text-foreground">Matthew Ray Homes Inc.</strong>, we specialize in
+              <strong className="text-foreground"> luxury home remodeling</strong>,
+              <strong className="text-foreground"> custom renovations</strong>, and
+              <strong className="text-foreground"> high-end home additions</strong> that elevate the way you live. With years of industry expertise, we've earned a reputation for delivering timeless, elegant, and innovative designs that reflect the unique style and vision of each homeowner we serve.
+            </p>
+            <p>
+              We provide <strong className="text-foreground">complete remodeling solutions</strong> — from concept to completion — so our clients don't have to manage multiple contractors or deal with fragmented responsibilities. Our fully integrated team handles every detail with exceptional craftsmanship and meticulous attention to detail.
+            </p>
+            <p>
+              Whether it's a <strong className="text-foreground">modern kitchen renovation</strong>, a <strong className="text-foreground">spa-inspired bathroom remodel</strong>, a <strong className="text-foreground">whole-home transformation</strong>, or a beautiful <strong className="text-foreground">home addition</strong>, we handle the entire process under one roof.
+            </p>
+            <p className="font-heading font-bold text-foreground text-lg mt-4 pt-4 border-t border-border">
+              We don't just remodel homes — we design and craft luxurious living experiences, one masterpiece at a time.
+            </p>
           </div>
         </div>
       </div>
